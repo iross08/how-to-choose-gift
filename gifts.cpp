@@ -1598,6 +1598,11 @@ int main()
     currencyYouWantToSpend=currency(personsScore,giversScore);
     giftGrade=grade(fmod(personsScore,giversScore));
     
+    cout<<"\nScores"
+          "\n**********\n";
+    cout<<"Person's Score: \t"<<personsScore<<endl;
+    cout<<"Your Score:: \t"<<giversScore<<endl;
+
     cout<<"\nOur Advice"
           "\n**********\n";
     cout<<"Currency you may expense: \t $1 to $"<<currencyYouWantToSpend<<endl;
