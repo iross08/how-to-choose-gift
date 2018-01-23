@@ -1,13 +1,13 @@
-# how to choose gift
+# How to choose gift, how much you need to pay, what type of gift to shop
 
-##C++
-	- Copy the codes 
-	[SOURCE CODE](https://raw.githubusercontent.com/iross08/how-to-choose-gift/master/gifts.cpp)
-	- Paste in the clean console:
-	[WHERE TO COPY AND PASTE](https://www.onlinegdb.com/online_c++_compiler)
-	- Click on the run button
+#C++
+- Copy the codes 
+> [SOURCE CODE](https://raw.githubusercontent.com/iross08/how-to-choose-gift/master/gifts.cpp)
+- Paste in the clean console:
+> [WHERE TO COPY AND PASTE](https://www.onlinegdb.com/online_c++_compiler)
+- Click on the run button
 
-##JAVA
+#JAVA
 - Download gifts.jar
 - Ensure you have Java Virtual Machine installed
 - Go to command prompt and type the following
