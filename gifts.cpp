@@ -1575,7 +1575,7 @@ int main()
 
     cout<<"\nOur Advice"
           "\n**********\n";
-    cout<<"Currency you may expense: \t $1 to $"<<currencyYouWantToSpend<<endl;
+    cout<<"Currency you may expense (MINIMUM): \t $10 to $"<<currencyYouWantToSpend<<endl;
     cout<<"Minimum quality of the GIFT: \t grade "<<giftGrade<<endl;
     
 	return 0;
