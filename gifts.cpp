@@ -98,37 +98,7 @@ double personsPerimetre()
 
     cout<<"\nPERSON WHO TO GIFT"
          "\n###################\n";
-
-	//About you
-	float age1=0;
-        string gender1;
-        string character1;
-        string personality1;
-        int familyBackground1;
-        string profession1;
-        int designation1;
-        int influence1;
-        //string schoolInCapital1;
-        //int highestAcademicInstitutionAttended1;
-        int highestDegree1;
-        int locationOfHigestAcademicInstitution1;
-        int thinkingPattern1;
-        int highestPossibleFuture1;
-        int numberOfLanguageKnows1;
-        int identicalQuality1;
-        int totalEstimatedAttendeeInAllEvents1;
-        int tradition1;
-        int philosophy1;
-	int numberofFriends1;
-	int averageClassofFriendCircle1;
-        int weightOfFriendCircle1;
-	int numberofColleagues1;
-	int averageClassofColleagueCircle1;
-	int weightOfColleaguesCircle1;
-        int reactionLevel1;
-        int responseLevel1;
-	int currentPshychology1;
-
+    
 	//Input for the person who you want to gift
 	cout<<"\n(1) Age: \n";
 	cin>>age;
@@ -769,7 +739,7 @@ double personsPerimetre()
                 }
 
 	//Finding the average value of all the persons score
-	std::vector <int>person ={agePoint,genderPoint,characterPoint,personalityPoint,familyBackgroundPoint,professionPoint,designationPoint,highestDegreePoint,locationOfHigestAcademicInstitutionPoint,thinkingPatternPoint,highestPossibleFuturePoint,numberOfLanguageKnowsPoint,identicalQualityPoint,totalEstimatedAttendeeInAllEvents,traditionPoint,philosophyPoint,weightOfFriendCircle,weightOfColleaguesCircle,reactionLevelPoint,responseLevelPoint,currentPshychologyPoint};
+	std::vector <int>person ={agePoint,genderPoint,characterPoint,personalityPoint,familyBackgroundPoint,professionPoint,designationPoint,influencePoint,highestDegreePoint,locationOfHigestAcademicInstitutionPoint,thinkingPatternPoint,highestPossibleFuturePoint,numberOfLanguageKnows,identicalQualityPoint,totalEstimatedAttendeeInAllEventsPoint,traditionPoint,philosophyPoint,weightOfFriendCircle,weightOfColleaguesCircle,reactionLevelPoint,responseLevelPoint,currentPshychologyPoint};
         
         personsScore = compute_average(person);
         //cout<<"\n"<<personsScore<<endl;
@@ -1474,7 +1444,7 @@ double giversPerimetre()
                 }
 
 	//Finding the average value of all the persons score
-	std::vector <int>giver ={agePoint,genderPoint,characterPoint,personalityPoint,familyBackgroundPoint,professionPoint,designationPoint,highestDegreePoint,locationOfHigestAcademicInstitutionPoint,thinkingPatternPoint,highestPossibleFuturePoint,numberOfLanguageKnowsPoint,identicalQualityPoint,totalEstimatedAttendeeInAllEvents,traditionPoint,philosophyPoint,weightOfFriendCircle,weightOfColleaguesCircle,reactionLevelPoint,responseLevelPoint,currentPshychologyPoint};
+	std::vector <int>giver ={agePoint,genderPoint,characterPoint,personalityPoint,familyBackgroundPoint,professionPoint,designationPoint,influencePoint,highestDegreePoint,locationOfHigestAcademicInstitutionPoint,thinkingPatternPoint,highestPossibleFuturePoint,numberOfLanguageKnows,identicalQualityPoint,totalEstimatedAttendeeInAllEventsPoint,traditionPoint,philosophyPoint,weightOfFriendCircle,weightOfColleaguesCircle,reactionLevelPoint,responseLevelPoint,currentPshychologyPoint};
         
         giversScore = compute_average(giver);
         //cout<<"\n"<<giversScore<<endl;
