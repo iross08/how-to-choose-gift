@@ -19,7 +19,7 @@
 
 ## (2)Gender[m/f/t]:
 
-## (3)CharaterDetails:https://quizlet.com/21998611/types-of-character-in-literature-flash-cards/;
+## (3)Charater Details: https://quizlet.com/21998611/types-of-character-in-literature-flash-cards/;
 - confidante
 - dynamic
 - flat
@@ -30,7 +30,7 @@
 - protagonist
 - antagonist
 
-## (4)PersonalityDetails:http://www.personalitypage.com/html/high-level.html;
+## (4)Personality Details: http://www.personalitypage.com/html/high-level.html;
 - dutiful
 - mechanic
 - nurturer
@@ -48,19 +48,19 @@
 - visionary
 - executive
 
-## (5)FamilyBackground
+## (5)Family Background
 - Elite
 - Aristocracy
 - Oligarchy
-- Rulingclass
-- Middleclass
-- Uppermiddleclass
-- Lowermiddleclass
+- Ruling class
+- Middle class
+- Upper middle class
+- Lower middle class
 - Bourgeoisie
-- WorkingClass
+- Working Class
 - Proletariat
 - Precarity
-- Underclasss
+- Under class
 
 ## (6)Profession
 - businessman
@@ -79,37 +79,37 @@
 - law
 - religion
 
-## (7)Currentdesignation
+## (7)Current designation
 - Co- founder
 - Trustees
-- PolicyMaker
-- StrategyMaker
+- Policy Maker
+- Strategy Maker
 - Management
 - Executives
 - Clarks
 - Others
 
-## (8)Levelofinfluence
-- Constantinfluence
-- Politicalinfluence
-- Economicandfinancialinfluence
-- Socialinfluence
-- Tryingtoinfluence
-- Nevertrytoinfluence
+## (8)Level of influence
+- Constant influence
+- Political influence
+- Economic and financial influence
+- Social influence
+- Trying to influence
+- Never try to influence
 
-## (9)HighestDegree
+## (9)Highest Degree
 - School
 - College
 - Undergraduate
 - Postgraduate
 
-## (10)Locationofyourhighestreachablelocationforeducation
-- Hometown
-- HomeCountry
-- Selfandathome
+## (10)Location of your highest reachable location for education
+- Home town
+- Home Country
+- Self and at home
 - Abroad
 
-## (11)ThinkingPattern
+## (11)Thinking Pattern - http://thepeakperformancecenter.com/educational-learning/thinking/types-of-thinking-2/
 - Convergent
 - Divergent
 - Critical
@@ -117,30 +117,30 @@
 - Sequential
 - Holistic
 
-## (12)Predictedfuture
-- GoalOriented
-- gethighnomatterwhat
-- organizeddecency
+## (12)Predicted future
+- Goal Oriented
+- get high no matter what
+- organized decency
 - moderate
-- anythingwilldo
-- classicalandconventional
-- Failedtoconvince
+- anything will do
+- classical and conventional
+- Failed to convince
 
-## (13)NumberofLanguageknows
+## (13)Number of Language knows
 
-## (14)Identicalqualityofawareness
-- organismconsciousness
-- controlconsciousness
-- consciousnessof
-- state/eventconsciousness
+## (14)Identical quality of awareness - http://selfpace.uconn.edu/class/ccs/Lycan1996Ch1.pdf
+- organism consciousness
+- control consciousness
+- consciousness of
+- state/event consciousness
 - reportability
-- introspectiveconsciousness
-- subjectiveconsciousness
-- self- consciousness
+- introspective consciousness
+- subjective consciousness
+- self-consciousness
 
 ## (15)TotalCrowdinalleventsattendedtillnow:
 
-## (16)Tradition
+## (16)Tradition - https://en.wikipedia.org/wiki/Continental_philosophy
 - African
 - Analytic
 - Aristotelian
@@ -158,7 +158,7 @@
 - Platonic
 - Western
 
-## (17)Philosophy
+## (17)Philosophy - https://en.wikipedia.org/wiki/Category:Philosophy
 - Epistemology
 - Metaphysics
 - Logic
@@ -166,54 +166,54 @@
 - Aesthetics
 - Other
 
-## (18- A)Estimatenumberofrealfriends
+## (18- A)Estimate number of real friends
 
-## (18- B)AverageClassoffriendcircle
+## (18- B)Average Class of friend circle - https://en.wikipedia.org/wiki/Social_class_in_the_United_Kingdom - https://en.wikipedia.org/wiki/Social_class
 - Elite
 - Aristocracy
 - Oligarchy
-- Rulingclass
-- Middleclass
-- Uppermiddleclass
-- Lowermiddleclass
+- Ruling class
+- Middle class
+- Upper middle class
+- Lower middle class
 - Bourgeoisie
-- WorkingClass
+- Working Class
 - Proletariat
 - Precarity
-- Underclasss
+- Under classs
 
-## (19- A)Estimatenumberofrealcolleagues
+## (19- A)Estimate number of real colleagues
 
-## (19- B)AverageClassofcolleaguescircle
+## (19- B)Average Class of colleagues circle
 - Elite
 - Aristocracy
 - Oligarchy
-- Rulingclass
-- Middleclass
-- Uppermiddleclass
-- Lowermiddleclass
+- Ruling class
+- Middle class
+- Upper middle class
+- Lower middle class
 - Bourgeoisie
-- WorkingClass
+- Working Class
 - Proletariat
 - Precarity
-- Underclasss
+- Under classs
 
-## (20)ReactionLevel
+## (20)Reaction Level
 - Fast
 - Moderate
 - Steady
 - Slow
 - Incompatible
 
-## (21)ResponseLevel
+## (21)Response Level
 - Fast
 - Moderate
 - Steady
 - Slow
 - Incompatible
 
-## (22)CurrentPsychologicalStatus
-- sanguine(enthusiastic,active,andsocial)
-- choleric(independent,decisive,goaloriented)
-- melancholic(analytical,detailoriented,deepthinkerandfeeler)
-- phlegmatic(relaxed,peaceful,quiet)
+## (22)Current Psychological Status -https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Four_temperaments.html -https://en.wikipedia.org/wiki/Four_temperaments
+- sanguine (enthusiastic,active,andsocial)
+- choleric (independent,decisive,goaloriented)
+- melancholic (analytical,detailoriented,deepthinkerandfeeler)
+- phlegmatic (relaxed,peaceful,quiet)
