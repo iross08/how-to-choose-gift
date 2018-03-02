@@ -1564,19 +1564,33 @@ int main()
     string giftGrade;
     
     personsScore=personsPerimetre();
+    cout<<"\nGIFTEE'S PATTERNED SCORE"
+        "\n**********\n";
+    cout<<personsScore<<endl;
+
+
     giversScore=giversPerimetre();
+    cout<<"\nYOUR PATTERNED SCORE"
+        "\n**********\n";
+    cout<<giversScore<<endl;
+    
     currencyYouWantToSpend=currency(personsScore,giversScore);
     giftGrade=grade(fmod(personsScore,giversScore));
     
-    cout<<"\nScores"
-          "\n**********\n";
+    cout<<"\n***********************\n"
+          "\n         SCORES"
+          "\n***********************\n";
     cout<<"Person's Score: \t"<<personsScore<<endl;
     cout<<"Your Score:: \t\t"<<giversScore<<endl;
 
-    cout<<"\nOur Advice"
-          "\n**********\n";
-    cout<<"Currency you may expense (MINIMUM): \t $10 to $"<<currencyYouWantToSpend<<endl;
+    cout<<"\nRECOMMENDATIONS"
+          "\n***************\n";
+    cout<<"Estimate currency you may expense (MINIMUM): \t $"<<currencyYouWantToSpend<<endl;
     cout<<"Minimum quality of the GIFT: \t grade "<<giftGrade<<endl;
+
+    cout<<"\n*******************************************************************************************************************\n"
+          "\n      GIFT MEANS MAKING MEMORIES - SO WORTH MUCH TO LEARN THE PERSON'S PERSPECTIVE WHO YOU CHOOSE TO GIFT"
+          "\n*******************************************************************************************************************\n";
     
 	return 0;
 }
