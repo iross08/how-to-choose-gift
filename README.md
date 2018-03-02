@@ -2,21 +2,22 @@
 
 ## C++
 ### Copy the codes
->[SOURCE CODE](https://raw.githubusercontent.com/iross08/how-to-choose-gift/master/gifts.cpp)
+> [SOURCE CODE](https://raw.githubusercontent.com/iross08/how-to-choose-gift/master/gifts.cpp)
 - Paste in the clean console:
->[WHERE TO COPY AND PASTE & SEE THE OUTPUT](https://www.onlinegdb.com/online_c++_compiler)
+> [WHERE TO COPY AND PASTE & SEE THE OUTPUT](https://www.onlinegdb.com/online_c++_compiler)
 - Click on the run button
-###Compile in your console
--Compile
->g++ -std=c++0x gifts.cpp -o gifts
--Run
+
+### Compile in your console
+- Compile
+> g++ -std=c++0x gifts.cpp -o gifts
+- Run
 >./gifts
 
 ## JAVA
 - [Downloadgifts.jar](https://github.com/iross08/how-to-choose-gift/blob/master/gifts.jar)
 - EnsureyouhaveJavaVirtualMachineinstalled[DownloadJVM](https://java.com/en/download/)
 - Gotocommandpromptandtypethefollowing
->java- jargifts.jar
+> java- jargifts.jar
 
 # Questions to get your closest score and match
 
