@@ -96,8 +96,8 @@ double personsPerimetre()
 
 	double personsScore=0.0;
 
-    cout<<"\nPERSON WHO TO GIFT"
-         "\n###################\n";
+    cout<<"\nINFO ABOUT THE PERSON WHO YOU WANT TO GIFT"
+          "\n##########################################\n";
     
 	//Input for the person who you want to gift
 	cout<<"\n(1) Age: \n";
@@ -562,7 +562,7 @@ double personsPerimetre()
 		"\n\t Logic ->Press 3"
 		"\n\t Ethics ->Press 4"
 		"\n\t Aesthetics ->Press 5"
-		"\n\t Other\n";
+		"\n\t Other ->Press 6\n";
         cin>>philosophy;
 		switch(philosophy) {
                         case 1:
@@ -1267,7 +1267,7 @@ double giversPerimetre()
 		"\n\t Logic ->Press 3"
 		"\n\t Ethics ->Press 4"
 		"\n\t Aesthetics ->Press 5"
-		"\n\t Other\n";
+		"\n\t Other->Press 6\n";
         cin>>philosophy;
 		switch(philosophy) {
                         case 1:
@@ -1512,46 +1512,46 @@ string grade(double point)
 {
     string grade;
     
-    if(point>=80) 
-    {
-        grade="A+ অ+ ক+ Outstanding";
-    }
-    else if(point>=75 && point<=80)
-    {
-        grade="A অ ক outstanding";
-    }
-    else if(point>=70 && point<=75)
-    {
-        grade="A- অ- ক- outstanding";
-    }
-    else if(point>=65 && point<=70)
-    {
-        grade="B+ আ+ খ+ very good";
-    }
-    else if(point>=60 && point<=65)
-    {
-        grade="B আ খ very good";
-    }
-    else if(point>=55 && point<=60)
-    {
-        grade="B- আ- খ- very good";
-    }
-    else if(point>=50 && point<=55)
-    {
-        grade="C+ ই+  গ+ Satisfactory";
-    }
-    else if(point>=45 && point<=50)
-    {
-        grade="C ই  গ Satisfactory";
-    }
-    else if(point>=40 && point<=45)
-    {
-        grade="D ঈ  ঘ Maginal";
-    }
-    else
-    {
-        grade="F ঋ ছ Below Average";
-    }
+        if(point>=80) 
+        {
+            grade="A+ Grade + Worthy, Extraordinary, Exclusively for Public Attention";
+        }
+        else if(point>=75 && point<=80)
+        {
+            grade="A Grade + Outstanding, Surprise, Precious";
+        }
+        else if(point>=70 && point<=75)
+        {
+            grade="A- Grade + Well Designed, Classifical, Proud to have";
+        }
+        else if(point>=65 && point<=70)
+        {
+            grade="B+ Grade + Very Good in all perspectives and taste";
+        }
+        else if(point>=60 && point<=65)
+        {
+            grade="B Grade + Very Good in all perspective";
+        }
+        else if(point>=55 && point<=60)
+        {
+            grade="B- Grade + Very Good and Seek Attentions";
+        }
+        else if(point>=50 && point<=55)
+        {
+            grade="C+ Grade + Satisfactory and Pay a good treat";
+        }
+        else if(point>=45 && point<=50)
+        {
+            grade="C Grade + Satisfactory and Remarkable in size";
+        }
+        else if(point>=40 && point<=45)
+        {
+            grade="D Grade + Maginal Line and Seek for highest quality";
+        }
+        else
+        {
+            grade="F Grade + Below Average and Pay Concisely";
+        }
     return grade;
 }
 
@@ -1565,22 +1565,22 @@ int main()
     
     personsScore=personsPerimetre();
     cout<<"\nGIFTEE'S PATTERNED SCORE"
-        "\n**********\n";
+          "\n************************\n";
     cout<<personsScore<<endl;
 
 
     giversScore=giversPerimetre();
     cout<<"\nYOUR PATTERNED SCORE"
-        "\n**********\n";
+          "\n********************\n";
     cout<<giversScore<<endl;
     
     currencyYouWantToSpend=currency(personsScore,giversScore);
     giftGrade=grade(fmod(personsScore,giversScore));
     
-    cout<<"\n***********************\n"
+    cout<<"\n***********************"
           "\n         SCORES"
           "\n***********************\n";
-    cout<<"Person's Score: \t"<<personsScore<<endl;
+    cout<<"Giftee's Score: \t"<<personsScore<<endl;
     cout<<"Your Score:: \t\t"<<giversScore<<endl;
 
     cout<<"\nRECOMMENDATIONS"
@@ -1588,8 +1588,8 @@ int main()
     cout<<"Estimate currency you may expense (MINIMUM): \t $"<<currencyYouWantToSpend<<endl;
     cout<<"Minimum quality of the GIFT: \t grade "<<giftGrade<<endl;
 
-    cout<<"\n*******************************************************************************************************************\n"
-          "\n      GIFT MEANS MAKING MEMORIES - SO WORTH MUCH TO LEARN THE PERSON'S PERSPECTIVE WHO YOU CHOOSE TO GIFT"
+    cout<<"\n*******************************************************************************************************************"
+          "\n      GIFT MEANS MAKING MEMORIES & FOLLOW UP IMAGE AND REPUTATION - SO WORTH MUCH TO LEARN THE PERSPECTIVES"
           "\n*******************************************************************************************************************\n";
     
 	return 0;
