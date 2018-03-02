@@ -1,4 +1,21 @@
-# GIFTS - How to choose gift,how much you need to pay,what type of gift to shop
+# GIFTS - How to choose gift,how much you need to pay,quality of gifts, what type of gift to shop
+
+# Literacy
+A gift or a present is an item given to someone without the **expectation of
+   payment or return**. An item is not a gift if that item is already owned by
+   the one to whom it is given. Although gift-giving might involve an
+   **expectation of reciprocity**, a gift is meant to be free. In many countries,
+   the act of mutually exchanging money, goods, etc. may **sustain social
+   relations** and **contribute to social cohesion**. Economists have elaborated
+   the economics of gift-giving into the notion of a gift economy. By
+   extension the term gift can refer to anything that makes the other **happier
+   or less sad, especially as a favor, including forgiveness and kindness**.
+   Gifts are also first and foremost presented on occasions.
+
+# Common tendency to gift shall be
+> drifting the person to your best, fork some of your personality, lift the person to the cliff of the peak, sniff the quality, swift your presence with the present with stiffed attitude of yours
+
+# About the Application
 
 ## C++
 ### Copy the codes
