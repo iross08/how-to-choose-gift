@@ -1,11 +1,16 @@
-# How to choose gift,how much you need to pay,what type of gift to shop
+# GIFTS - How to choose gift,how much you need to pay,what type of gift to shop
 
 ## C++
-- Copy the codes
+### Copy the codes
 >[SOURCE CODE](https://raw.githubusercontent.com/iross08/how-to-choose-gift/master/gifts.cpp)
 - Paste in the clean console:
 >[WHERE TO COPY AND PASTE & SEE THE OUTPUT](https://www.onlinegdb.com/online_c++_compiler)
 - Click on the run button
+###Compile in your console
+-Compile
+>g++ -std=c++0x gifts.cpp -o gifts
+-Run
+>./gifts
 
 ## JAVA
 - [Downloadgifts.jar](https://github.com/iross08/how-to-choose-gift/blob/master/gifts.jar)
@@ -15,11 +20,15 @@
 
 # Questions to get your closest score and match
 
-## (1)Age:
+## (1)Age
 
-## (2)Gender[m/f/t]:
+## (2)Gender[m/f/t]
+-m for male
+-f for female
+-t for others
 
-## (3)Charater Details: https://quizlet.com/21998611/types-of-character-in-literature-flash-cards/;
+## (3)Charater Details
+* Details inside: https://quizlet.com/21998611/types-of-character-in-literature-flash-cards/;
 - confidante
 - dynamic
 - flat
@@ -30,7 +39,8 @@
 - protagonist
 - antagonist
 
-## (4)Personality Details: http://www.personalitypage.com/html/high-level.html;
+## (4)Personality Details
+* Details inside: http://www.personalitypage.com/html/high-level.html;
 - dutiful
 - mechanic
 - nurturer
@@ -109,7 +119,8 @@
 - Self and at home
 - Abroad
 
-## (11)Thinking Pattern - http://thepeakperformancecenter.com/educational-learning/thinking/types-of-thinking-2/
+## (11)Thinking Pattern 
+* Details inside - http://thepeakperformancecenter.com/educational-learning/thinking/types-of-thinking-2/
 - Convergent
 - Divergent
 - Critical
@@ -128,7 +139,8 @@
 
 ## (13)Number of Language knows
 
-## (14)Identical quality of awareness - http://selfpace.uconn.edu/class/ccs/Lycan1996Ch1.pdf
+## (14)Identical quality of awareness 
+* Details inside - http://selfpace.uconn.edu/class/ccs/Lycan1996Ch1.pdf
 - organism consciousness
 - control consciousness
 - consciousness of
@@ -140,7 +152,8 @@
 
 ## (15)TotalCrowdinalleventsattendedtillnow:
 
-## (16)Tradition - https://en.wikipedia.org/wiki/Continental_philosophy
+## (16)Tradition 
+* Details inside - https://en.wikipedia.org/wiki/Continental_philosophy
 - African
 - Analytic
 - Aristotelian
@@ -158,7 +171,8 @@
 - Platonic
 - Western
 
-## (17)Philosophy - https://en.wikipedia.org/wiki/Category:Philosophy
+## (17)Philosophy 
+* Details inside - https://en.wikipedia.org/wiki/Category:Philosophy
 - Epistemology
 - Metaphysics
 - Logic
@@ -168,7 +182,8 @@
 
 ## (18- A)Estimate number of real friends
 
-## (18- B)Average Class of friend circle - https://en.wikipedia.org/wiki/Social_class_in_the_United_Kingdom - https://en.wikipedia.org/wiki/Social_class
+## (18- B)Average Class of friend circle 
+* Details inside - https://en.wikipedia.org/wiki/Social_class_in_the_United_Kingdom - https://en.wikipedia.org/wiki/Social_class
 - Elite
 - Aristocracy
 - Oligarchy
@@ -212,8 +227,11 @@
 - Slow
 - Incompatible
 
-## (22)Current Psychological Status -https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Four_temperaments.html -https://en.wikipedia.org/wiki/Four_temperaments
+## (22)Current Psychological Status 
+* Details inside -https://ipfs.io/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/Four_temperaments.html -https://en.wikipedia.org/wiki/Four_temperaments
 - sanguine (enthusiastic,active,andsocial)
 - choleric (independent,decisive,goaloriented)
 - melancholic (analytical,detailoriented,deepthinkerandfeeler)
 - phlegmatic (relaxed,peaceful,quiet)
+
+IMPORTANT # your gifts may be worthy to make memories - so choose all the 22 options as input with patience to select the precise points
