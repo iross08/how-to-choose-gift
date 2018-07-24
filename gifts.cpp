@@ -2267,6 +2267,10 @@ int main()
     ofstream gifts;
     gifts.open ("gifts.txt",ios::app);
 
+    cout<<"\n***********************************************************"
+        "\n         GIFTS CHOOSING CATEGORIES AND ESTIMATE PRICE"
+          "\n***********************************************************\n";
+
     personsScore=personsPerimetre();
     cout<<"\nGIFTEE'S PATTERNED SCORE"
           "\n************************\n";
