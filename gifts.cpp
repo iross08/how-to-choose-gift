@@ -2,8 +2,10 @@
 #include<string>
 #include<vector>
 #include<cmath>
+#include <fstream>
 
 using namespace std;
+
 
 //function to compute average
 double compute_average(std::vector<int> &person) {
@@ -96,7 +98,13 @@ double personsPerimetre()
 
 	double personsScore=0.0;
 
+    ofstream gifts;
+    gifts.open ("gifts.txt",ios::app);
+    
     cout<<"\nINFO ABOUT THE PERSON WHO YOU WANT TO GIFT"
+          "\n##########################################\n";
+
+    gifts<<"\nINFO ABOUT THE PERSON WHO YOU WANT TO GIFT"
           "\n##########################################\n";
     
 	//Input for the person who you want to gift
@@ -105,6 +113,8 @@ double personsPerimetre()
 		
 		//Age Point out of 100 
 		agePoint=(int)age%100;
+        
+	gifts<<"\n(1) Age: "<<age <<"\tAge Point: "<<agePoint <<endl;
 
 	cout<<"\n(2) Gender [m/f/t]: \n";
 	cin>>gender;
@@ -117,6 +127,8 @@ double personsPerimetre()
 		else
 			genderPoint=71;
 
+	gifts<<"\n(2) Gender: "<<gender <<"\tGender Point: "<<genderPoint <<endl;
+        
 	cout<<"\n(3) Charater Details: https://quizlet.com/21998611/types-of-character-in-literature-flash-cards/";
 	cout<<"\nCharacter"
 	       "\n\t confidante"
@@ -132,25 +144,44 @@ double personsPerimetre()
 
 		switch(_(character)) {
   			case _("confidante"):
-    				characterPoint=90; break;
+    				characterPoint=90; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
   			case _("dynamic"):
-    				 characterPoint=80; break;
+    				 characterPoint=80; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                     break;
 			case _("flat"):
-                                 characterPoint=75; break;
+                    characterPoint=75; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("foil"):
-                                 characterPoint=70; break;
+                    characterPoint=70; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("round"):
-                                 characterPoint=65; break;
+                    characterPoint=65; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("static"):
-                                 characterPoint=60; break;
+                    characterPoint=60; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("stock"):
-                                 characterPoint=50; break;
+                    characterPoint=50; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("protagonist"):
-                                 characterPoint=40; break;
+                    characterPoint=40; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("antagonist"):
-                                 characterPoint=85; break;
+                    characterPoint=85; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
   			default:
-                                 characterPoint=20;
+                    characterPoint=20;
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
   		}
 		//cout<<characterPoint;
 
@@ -176,39 +207,76 @@ double personsPerimetre()
 
 	switch(_(personality)) {
                         case _("dutiful"):
-                                personalityPoint=1000 %(int)age; break;
+                            personalityPoint=1000 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+                            
                         case _("mechanic"):
-                                 personalityPoint=550 %(int)age; break;
+                            personalityPoint=550 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+
                         case _("nurturer"):
-                                 personalityPoint=800 %(int)age; break;
+                            personalityPoint=800 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+
                         case _("artist"):
-                                 personalityPoint=700 %(int)age; break;
+                            personalityPoint=700 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+
                         case _("protector"):
-                                 personalityPoint=600 %(int)age; break;
+                            personalityPoint=600 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;                            
+                            break;
                         case _("idealist"):
-                                 personalityPoint=100 %(int)age; break;
+                            personalityPoint=100 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("scientist"):
-                                 personalityPoint=500 %(int)age; break;
+                            personalityPoint=500 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                             break;
                         case _("thinker"):
-                                 personalityPoint=950 %(int)age; break;
+                            personalityPoint=950 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                             break;
                         case _("doer"):
-                                 personalityPoint=650 %(int)age; break;
-			case _("guardian"):
-                                 personalityPoint=400 %(int)age; break;
+                            personalityPoint=650 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                             break;
+                        case _("guardian"):
+                            personalityPoint=400 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("performer"):
-                                 personalityPoint=300 %(int)age; break;
+                            personalityPoint=300 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("caregiver"):
-                                 personalityPoint=750 %(int)age; break;
+                            personalityPoint=750 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("inspirer"):
-                                 personalityPoint=850 %(int)age; break;
+                            personalityPoint=850 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("giver"):
-                                 personalityPoint=900 %(int)age; break;
+                            personalityPoint=900 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("visionary"):
-                                 personalityPoint=350 %(int)age; break;
+                            personalityPoint=350 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("executive"):
-                                 personalityPoint=200 %(int)age; break;
+                            personalityPoint=200 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         default:
-                                 personalityPoint=50 %(int)age;
+                            personalityPoint=50 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
                 }
 
 	cout<<"\n(5) Family Background\n"
@@ -220,39 +288,64 @@ double personsPerimetre()
 		"\t Upper middle class -> Press 6\n"
 		"\t Lower middle class -> Press 7\n"
 		"\t Bourgeoisie -> Press 8\n"
-		"\t WorkingClass -> Press 9\n"
+		"\t Working Class -> Press 9\n"
 		"\t Proletariat -> Press 10\n"
 		"\t Precarity -> Press 11\n"
-		"\t Underclasss -> Press 12\n";
+		"\t Under class -> Press 12\n";
 	cin>>familyBackground;
 
 		switch(familyBackground) {
                         case 1:
-                                familyBackgroundPoint=100; break;
+                                familyBackgroundPoint=100; 
+                                gifts<<"\n(5) Family Background: \tElite"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                break;
                         case 2:
-                                 familyBackgroundPoint=96; break;
+                                 familyBackgroundPoint=96; 
+                                 gifts<<"\n(5) Family Background: \tAristocracy"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 3:
-                                 familyBackgroundPoint=93; break;
+                                 familyBackgroundPoint=93; 
+                                 gifts<<"\n(5) Family Background: \tOligarchy"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 4:
-                                 familyBackgroundPoint=90; break;
+                                 familyBackgroundPoint=90; 
+                                 gifts<<"\n(5) Family Background: \tRuling class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 5:
-                                 familyBackgroundPoint=80; break;
+                                 familyBackgroundPoint=80; 
+                                 gifts<<"\n(5) Family Background: \tMiddle class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 6:
-                                 familyBackgroundPoint=70; break;
+                                 familyBackgroundPoint=70; 
+                                 gifts<<"\n(5) Family Background: \tUpper middle class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 7:
-                                 familyBackgroundPoint=60; break;
+                                 familyBackgroundPoint=60; 
+                                 gifts<<"\n(5) Family Background: \tLower middle class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 8:
-                                 familyBackgroundPoint=50; break;
+                                 familyBackgroundPoint=50; 
+                                 gifts<<"\n(5) Family Background: \tBourgeoisie"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 9:
-                                 familyBackgroundPoint=40; break;
+                                 familyBackgroundPoint=40; 
+                                 gifts<<"\n(5) Family Background: \tWorking class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 10:
-                                 familyBackgroundPoint=30; break;
+                                 familyBackgroundPoint=30; 
+                                 gifts<<"\n(5) Family Background: \tProletariat"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 11:
-                                 familyBackgroundPoint=20; break;
+                                 familyBackgroundPoint=20; 
+                                 gifts<<"\n(5) Family Background: \tPrecarity"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 12:
-                                 familyBackgroundPoint=10; break;
+                                 familyBackgroundPoint=10; 
+                                 gifts<<"\n(5) Family Background: \tUnder class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         default:
                                  familyBackgroundPoint=5;
+                                 gifts<<"\n(5) Family Background: \tDefault"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
 		}
 
 	cout<<"\n(6) Profession\n"
@@ -275,37 +368,68 @@ double personsPerimetre()
 
 		switch(_(profession)) {
                         case _("businessman"):
-                                 professionPoint=55; break;
+                                 professionPoint=55; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("corporate"):
-                                 professionPoint=35; break;
+                                 professionPoint=35; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("academician"):
-                                 professionPoint=80; break;
+                                 professionPoint=80; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("government"):
-                                 professionPoint=100; break;
+                                 professionPoint=100; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("ngo"):
-                                 professionPoint=50; break;
+                                 professionPoint=50; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("media"):
-                                 professionPoint=70; break;
+                                 professionPoint=70; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("research"):
-                                 professionPoint=40; break;
+                                 professionPoint=40; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("investor"):
-                                 professionPoint=90; break;
+                                 professionPoint=90; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("restaurant"):
-                                 professionPoint=45; break;
-			case _("realestate"):
-                                 professionPoint=30; break;
+                                 professionPoint=45; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
+                        case _("realestate"):
+                                 professionPoint=30; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("mechanic"):
-                                 professionPoint=35; break;
+                                 professionPoint=35; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("health"):
-                                 professionPoint=60; break;
+                                 professionPoint=60; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("finance"):
-                                 professionPoint=95; break;
+                                 professionPoint=95; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("law"):
-                                 professionPoint=85; break;
+                                 professionPoint=85; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("religion"):
-                                 professionPoint=75; break;
+                                 professionPoint=75; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         default:
                                  professionPoint=50;
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
                 }
 
 
@@ -322,23 +446,40 @@ double personsPerimetre()
 		
 		switch(designation) {
                         case 1:
-                                 designationPoint=96; break;
+                                 designationPoint=96; 
+                                 gifts<<"\n(7) Current designation: \tCo-founder"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 2:
-                                 designationPoint=84; break;
+                                 designationPoint=84; 
+                                 gifts<<"\n(7) Current designation: \tTrustees" <<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 3:
-                                 designationPoint=72; break;
+                                 designationPoint=72; 
+                                 gifts<<"\n(7) Current designation: \tPolicy Maker"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 4:
-                                 designationPoint=60; break;
+                                 designationPoint=60; 
+                                 gifts<<"\n(7) Current designation: \tStrategy Maker" <<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 5:
-                                 designationPoint=48; break;
+                                 designationPoint=48; 
+                                 gifts<<"\n(7) Current designation: \tManagement"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 6:
-                                 designationPoint=36; break;
+                                 designationPoint=36; 
+                                 gifts<<"\n(7) Current designation: \tExecutives"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 7:
-                                 designationPoint=24; break;
+                                 designationPoint=24; 
+                                 gifts<<"\n(7) Current designation: \tClarks"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 8:
-                                 designationPoint=12; break; 
+                                 designationPoint=12; 
+                                 gifts<<"\n(7) Current designation: \tOthers"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break; 
                         default:
                                  designationPoint=8;
+                                 gifts<<"\n(7) Current designation: \tDefault"<<"\tDesignation Point: "<<designationPoint<<endl;
                 }
 
 	cout<<"\n(8) Level of influence"
@@ -352,19 +493,32 @@ double personsPerimetre()
 
 		switch(influence) {
                         case 1:
-                                 influencePoint=90; break;
+                                 influencePoint=90; 
+                                 gifts<<"\n(8) Level of influence: \tConstant influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 2:
-                                 influencePoint=80; break;
+                                 influencePoint=80; 
+                                 gifts<<"\n(8) Level of influence: \tPolitical influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 3:
-                                 influencePoint=71; break;
+                                 influencePoint=71; 
+                                 gifts<<"\n(8) Level of influence: \tEconomic and financial influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 4:
-                                 influencePoint=60; break;
+                                 influencePoint=60; 
+                                 gifts<<"\n(8) Level of influence: \tSocial influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 5:
-                                 influencePoint=50; break;
+                                 influencePoint=50; 
+                                 gifts<<"\n(8) Level of influence: \tTrying to influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 6:
-                                 influencePoint=40; break;
+                                 influencePoint=40; 
+                                 gifts<<"\n(8) Level of influence: \tNever try to influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         default:
                                  influencePoint=5;
+                                 gifts<<"\n(8) Level of influence: \tDefault"<<"\tInfluence Point: "<<influencePoint<<endl;
                 }
 
         //cin>>schoolInCapital;
@@ -379,15 +533,24 @@ double personsPerimetre()
 		
 		switch(highestDegree) {
                         case 1:
-                                 highestDegreePoint=60; break;
+                                 highestDegreePoint=60; 
+                                 gifts<<"\n(9) Highest Degree: \tSchool "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         case 2:
-                                 highestDegreePoint=70; break;
+                                 highestDegreePoint=70; 
+                                 gifts<<"\n(9) Highest Degree: \tCollege "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         case 3:
-                                 highestDegreePoint=80; break;
+                                 highestDegreePoint=80; 
+                                 gifts<<"\n(9) Highest Degree: \tUndergraduate "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         case 4:
-                                 highestDegreePoint=100; break;
+                                 highestDegreePoint=100; 
+                                 gifts<<"\n(9) Highest Degree: \tPostgraduate "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         default:
                                  highestDegreePoint=10;
+                                 gifts<<"\n(9) Highest Degree: \tDefault"<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
                 }
 
 	cout<<"\n(10) Location of your highest reachable location for education\n"
@@ -398,15 +561,24 @@ double personsPerimetre()
         cin>>locationOfHigestAcademicInstitution;
 		switch(locationOfHigestAcademicInstitution) {
                         case 1:
-                                 locationOfHigestAcademicInstitutionPoint=50; break;
+                                 locationOfHigestAcademicInstitutionPoint=50; 
+                                 gifts<<"\n(10) Location of education:\tHome Town "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         case 2:
-                                 locationOfHigestAcademicInstitutionPoint=80; break;
+                                 locationOfHigestAcademicInstitutionPoint=80; 
+                                 gifts<<"\n(10) Location of education:\tHome Country "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         case 3:
-                                 locationOfHigestAcademicInstitutionPoint=10; break;
+                                 locationOfHigestAcademicInstitutionPoint=10; 
+                                 gifts<<"\n(10) Location of education: \tSelf and at home "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         case 4:
-                                 locationOfHigestAcademicInstitutionPoint=100; break;
+                                 locationOfHigestAcademicInstitutionPoint=100; 
+                                 gifts<<"\n(10) Location of education: \tAbroad "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         default:
                                  locationOfHigestAcademicInstitutionPoint=10;
+                                 gifts<<"\n(10) Location of education: \tDefault "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
                 }
         
 	cout<<"\n(11) Thinking Pattern"
@@ -419,19 +591,32 @@ double personsPerimetre()
 	cin>>thinkingPattern;
 		switch(thinkingPattern) {
                         case 1:
-                                 thinkingPatternPoint=700 % (int) age; break;
+                                 thinkingPatternPoint=700 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tConvergent"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 2:
-                                 thinkingPatternPoint=600 % (int) age; break;
+                                 thinkingPatternPoint=600 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tDivergent"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 3:
-                                 thinkingPatternPoint=500 % (int) age; break;
+                                 thinkingPatternPoint=500 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tCritical"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 4:
-                                 thinkingPatternPoint=400 % (int) age; break;
+                                 thinkingPatternPoint=400 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tCreative"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 5:
-                                 thinkingPatternPoint=300 % (int) age; break;
+                                 thinkingPatternPoint=300 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tSequential"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 6:
-                                 thinkingPatternPoint=200 % (int) age; break;
+                                 thinkingPatternPoint=200 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tHolistic"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                       	default:
                                  thinkingPatternPoint=100 % (int) age;
+                                 gifts<<"\n(11) Thinking Pattern: \tDefault"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
                 }
 
 	cout<<"\n(12) Predicted future\n"
@@ -445,25 +630,41 @@ double personsPerimetre()
         cin>>highestPossibleFuture;
 		switch(highestPossibleFuture) {
                         case 1:
-                                 highestPossibleFuturePoint=100; break;
+                                 highestPossibleFuturePoint=100; 
+                                 gifts<<"\n(12) Predicted Future: \tGoal oriented"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 2:
-                                 highestPossibleFuturePoint=96; break;
+                                 highestPossibleFuturePoint=96; 
+                                 gifts<<"\n(12) Predicted Future: \tGet high no matter what"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 3:
-                                 highestPossibleFuturePoint=93; break;
+                                 highestPossibleFuturePoint=93; 
+                                 gifts<<"\n(12) Predicted Future: \tOrganized decency"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 4:
-                                 highestPossibleFuturePoint=90; break;
+                                 highestPossibleFuturePoint=90; 
+                                 gifts<<"\n(12) Predicted Future: \tModerate"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 5:
-                                 highestPossibleFuturePoint=80; break;
+                                 highestPossibleFuturePoint=80; 
+                                 gifts<<"\n(12) Predicted Future: \tAnything will do"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 6:
-                                 highestPossibleFuturePoint=70; break;
+                                 highestPossibleFuturePoint=70; 
+                                 gifts<<"\n(12) Predicted Future: \tClassical and conventional"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 7:
-                                 highestPossibleFuturePoint=60; break;
+                                 highestPossibleFuturePoint=60; 
+                                 gifts<<"\n(12) Predicted Future: \tFailed to convince"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         default:
                                  highestPossibleFuturePoint=5;
+                                 gifts<<"\n(12) Predicted Future: \tDefault"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
                 }
 
 	cout<<"\n(13) Number of Language knows\n";
         cin>>numberOfLanguageKnows;
+        gifts<<"\n(13) Number of language knows: \t"<<numberOfLanguageKnows<<endl;
 
 	cout<<"\n(14) Identical quality of awareness\n"
 		"\n\t organism consciousness ->Press 1"
@@ -477,28 +678,46 @@ double personsPerimetre()
 	cin>>identicalQuality;
 		switch(identicalQuality) {
                         case 1:
-                                 identicalQualityPoint=100; break;
+                                 identicalQualityPoint=100; 
+                                 gifts<<"\n(14) Identical quality of awareness: \torganism consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 2:
-                                 identicalQualityPoint=96; break;
+                                 identicalQualityPoint=96; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tcontrol consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 3:
-                                 identicalQualityPoint=93; break;
+                                 identicalQualityPoint=93; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tconsciousness of"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 4:
-                                 identicalQualityPoint=90; break;
+                                 identicalQualityPoint=90; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tstate/event consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 5:
-                                 identicalQualityPoint=80; break;
+                                 identicalQualityPoint=80; 
+                                 gifts<<"\n(14) Identical quality of awareness: \treportability"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 6:
-                                 identicalQualityPoint=70; break;
+                                 identicalQualityPoint=70; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tintrospective consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 7:
-                                 identicalQualityPoint=60; break;
+                                 identicalQualityPoint=60; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tsubjective consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 8:
-                                 identicalQualityPoint=50; break;
+                                 identicalQualityPoint=50; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tself-consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         default:
                                  identicalQualityPoint=5;
+                                 gifts<<"\n(14) Identical quality of awareness: \tDefault"<<"\tPoint: "<<identicalQualityPoint<<endl;
                 }
 
 	cout<<"\n(15) Total Crowd in all events attended till now: \n";
         cin>>totalEstimatedAttendeeInAllEvents;
         totalEstimatedAttendeeInAllEventsPoint= totalEstimatedAttendeeInAllEvents% (int) age;
+        gifts<<"\n(15) Total Crowd in all events attended till now: \t"<<totalEstimatedAttendeeInAllEvents<<"\tPoint: "<<totalEstimatedAttendeeInAllEventsPoint<<endl;
         
 	cout<<"\n(16) Tradition"
 	       "\n\t African ->Press 1"
@@ -521,39 +740,72 @@ double personsPerimetre()
 
 		switch(tradition) {
                         case 1:
-                                 traditionPoint= 500 % (int) age ; break;
+                                 traditionPoint= 500 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tAfrican"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 2:
-                                 traditionPoint= 1000 % (int) age ; break;
+                                 traditionPoint= 1000 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tAnalytic"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 3:
-                                 traditionPoint= 900 % (int) age ; break;
+                                 traditionPoint= 900 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tAristotelian"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 4:
-                                 traditionPoint= 300 % (int) age ; break;
+                                 traditionPoint= 300 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tBuddhist"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 5:
-                                 traditionPoint= 800 % (int) age ; break;
+                                 traditionPoint= 800 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tChinese"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 6:
-                                 traditionPoint= 700 % (int) age ; break;
+                                 traditionPoint= 700 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tChristian"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 7:
-                                 traditionPoint= 600 % (int) age ; break;
+                                 traditionPoint= 600 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tContinental"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 8:
-                                 traditionPoint= 400 % (int) age ; break;
+                                 traditionPoint= 400 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tExistentialism"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 9:
-                                 traditionPoint= 750 % (int) age ; break;
+                                 traditionPoint= 750 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tHindu"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 10:
-                                 traditionPoint= 200 % (int) age;  break;
+                                 traditionPoint= 200 % (int) age;  
+                                 gifts<<"\n(16) Tradition: \tJain"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 11:
-                                 traditionPoint= 950 % (int) age ; break;
+                                 traditionPoint= 950 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tJewish"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 12:
-                                 traditionPoint= 650 % (int) age; break;
+                                 traditionPoint= 650 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tPragmatism"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 13:
-                                 traditionPoint= 550 % (int) age ; break;
+                                 traditionPoint= 550 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tEastern"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 14:
-                                 traditionPoint= 450 % (int) age; break;
+                                 traditionPoint= 450 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tIslamic"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 15:
-                                 traditionPoint= 350 % (int) age; break;
+                                 traditionPoint= 350 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tPlatonic"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 16:
-                                 traditionPoint= 911 % (int) age; break;
+                                 traditionPoint= 911 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tWestern"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         default:
                                  traditionPoint=100 % (int) age;
+                                 gifts<<"\n(16) Tradition: \tDefault"<<"\tPoint: "<<traditionPoint<<endl;
                 }
 
 	cout<<"\n(17) Philosophy"
@@ -566,21 +818,34 @@ double personsPerimetre()
         cin>>philosophy;
 		switch(philosophy) {
                         case 1:
-                                 philosophyPoint=500  % (int) age; break;
+                                 philosophyPoint=500  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tEpistemology"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 2:
-                                 philosophyPoint=400  % (int) age; break;
+                                 philosophyPoint=400  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tMetaphysics"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 3:
-                                 philosophyPoint=300  % (int) age; break;
+                                 philosophyPoint=300  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tLogic"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 4:
-                                 philosophyPoint=200  % (int) age; break;
+                                 philosophyPoint=200  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tEthics"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 5:
-                                 philosophyPoint=100 % (int) age; break; 
+                                 philosophyPoint=100 % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tAesthetics"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break; 
                         default:
                                  philosophyPoint=600 % (int) age;
+                                 gifts<<"\n(17) Philosophy: \tOthers"<<"\tPoint: "<<philosophyPoint<<endl;
                 }
 
 	cout<<"\n(18-A) Estimate number of real friends\n";
         cin>>numberofFriend;
+        gifts<<"\n(18-A) Estimate number of real friends: \t"<<numberofFriend<<endl;
+        
         cout<<"\n(18-B) Average Class of friend circle\n"
                 "\t Elite -> Press 1\n"
                 "\t Aristocracy -> Press 2\n"
@@ -593,42 +858,70 @@ double personsPerimetre()
                 "\t WorkingClass -> Press 9\n"
                 "\t Proletariat -> Press 10\n"
                 "\t Precarity -> Press 11\n"
-                "\t Underclasss -> Press 12\n";
+                "\t Underclass -> Press 12\n";
         cin>>averageClassofFriendCircle;
 		switch(averageClassofFriendCircle) {
                         case 1:
-                                 averageClassofFriendCirclePoint=100; break;
+                                 averageClassofFriendCirclePoint=100; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tElite"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 2:
-                                 averageClassofFriendCirclePoint=96; break;
+                                 averageClassofFriendCirclePoint=96; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tAristocracy"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 3:
-                                 averageClassofFriendCirclePoint=93; break;
+                                 averageClassofFriendCirclePoint=93; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tOligarchy"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 4:
-                                 averageClassofFriendCirclePoint=90; break;
+                                 averageClassofFriendCirclePoint=90; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tRuling class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 5:
-                                 averageClassofFriendCirclePoint=80; break;
+                                 averageClassofFriendCirclePoint=80; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tMiddle class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 6:
-                                 averageClassofFriendCirclePoint=70; break;
+                                 averageClassofFriendCirclePoint=70; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tUpper middle class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 7:
-                                 averageClassofFriendCirclePoint=60; break;
+                                 averageClassofFriendCirclePoint=60; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tLower middle class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 8:
-                                 averageClassofFriendCirclePoint=50; break;
+                                 averageClassofFriendCirclePoint=50; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tBourgeoisie"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 9:
-                                 averageClassofFriendCirclePoint=40; break;
+                                 averageClassofFriendCirclePoint=40; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tWorking class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 10:
-                                 averageClassofFriendCirclePoint=30; break;
+                                 averageClassofFriendCirclePoint=30; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tProletariat"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 11:
-                                 averageClassofFriendCirclePoint=20; break;
+                                 averageClassofFriendCirclePoint=20; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tPrecarity"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 12:
-                                 averageClassofFriendCirclePoint=10; break;
+                                 averageClassofFriendCirclePoint=10; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tUnder class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         default:
                                  averageClassofFriendCirclePoint=5;
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tOthers"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
                 }
 
         weightOfFriendCircle=(numberofFriend*averageClassofFriendCirclePoint)%100;
+        gifts<<"\n(18-C) Weight of friend circle: "<<weightOfFriendCircle<<endl;
 
 	cout<<"\n(19-A) Estimate number of real colleagues\n";
 	cin>>numberofColleagues;
-	cout<<"\n(19-B) Average Class of colleagues circle\n"
+    gifts<<"\n(19-A) Estimate number of real colleagues: \t"<<numberofColleagues<<endl;
+
+    cout<<"\n(19-B) Average Class of colleagues circle\n"
                 "\t Elite -> Press 1\n"
                 "\t Aristocracy -> Press 2\n"
                 "\t Oligarchy -> Press 3\n"
@@ -644,35 +937,62 @@ double personsPerimetre()
 	cin>>averageClassofColleagueCircle;
 		switch(averageClassofColleagueCircle) {
                         case 1:
-                                averageClassofColleagueCirclePoint=100; break;
+                                 averageClassofColleagueCirclePoint=100; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tElite"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 2:
-                                 averageClassofColleagueCirclePoint=96; break;
+                                 averageClassofColleagueCirclePoint=96; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tAristocracy"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 3:
-                                 averageClassofColleagueCirclePoint=93; break;
+                                 averageClassofColleagueCirclePoint=93; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tOligarchy"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 4:
-                                 averageClassofColleagueCirclePoint=90; break;
+                                 averageClassofColleagueCirclePoint=90; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tRuling class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 5:
-                                 averageClassofColleagueCirclePoint=80; break;
+                                 averageClassofColleagueCirclePoint=80; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tMiddle class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 6:
-                                 averageClassofColleagueCirclePoint=70; break;
+                                 averageClassofColleagueCirclePoint=70; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tUpper middle class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 7:
-                                 averageClassofColleagueCirclePoint=60; break;
+                                 averageClassofColleagueCirclePoint=60; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tLower middle class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;                                 
+                                 break;
                         case 8:
-                                 averageClassofColleagueCirclePoint=50; break;
+                                 averageClassofColleagueCirclePoint=50; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tBourgeoisie"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 9:
-                                 averageClassofColleagueCirclePoint=40; break;
+                                 averageClassofColleagueCirclePoint=40; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tWorking class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 10:
-                                 averageClassofColleagueCirclePoint=30; break;
+                                 averageClassofColleagueCirclePoint=30; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tProletariat"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 11:
-                                 averageClassofColleagueCirclePoint=20; break;
+                                 averageClassofColleagueCirclePoint=20; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tPrecarity"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 12:
-                                 averageClassofColleagueCirclePoint=10; break;
+                                 averageClassofColleagueCirclePoint=10; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tUnder class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         default:
                                  averageClassofColleagueCirclePoint=5;
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tOthers"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+
                 }
 
         weightOfColleaguesCircle=(numberofColleagues*averageClassofColleagueCirclePoint)%100;
-
+        gifts<<"\n(19-C) Weight of colleagues circle: "<<weightOfColleaguesCircle<<endl;
+    
 	cout<<"\n(20) Reaction Level"
                 "\n\t Fast ->Press 1"
                 "\n\t Moderate ->Press 2"
@@ -682,17 +1002,28 @@ double personsPerimetre()
 	cin>>reactionLevel;
 		switch(reactionLevel) {
                         case 1:
-                                 reactionLevelPoint=100; break;
+                                 reactionLevelPoint=100; 
+                                 gifts<<"\n(20) Reaction Level: \tFast"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 2:
-                                 reactionLevelPoint=96; break;
+                                 reactionLevelPoint=96; 
+                                 gifts<<"\n(20) Reaction Level: \tModerate"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 3:
-                                 reactionLevelPoint=93; break;
+                                 reactionLevelPoint=93; 
+                                 gifts<<"\n(20) Reaction Level: \tSteady"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 4:
-                                 reactionLevelPoint=90; break;
+                                 reactionLevelPoint=90; 
+                                 gifts<<"\n(20) Reaction Level: \tSlow"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 5:
-                                 reactionLevelPoint=80; break;
+                                 reactionLevelPoint=80; 
+                                 gifts<<"\n(20) Reaction Level: \tIncompatible"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         default:
                                  reactionLevelPoint=5;
+                                 gifts<<"\n(20) Reaction Level: \tDefault"<<"\tPoint: "<<reactionLevelPoint<<endl;
                 }
 
 	cout<<"\n(21) Response Level"
@@ -705,17 +1036,28 @@ double personsPerimetre()
 
 		switch(responseLevel) {
                         case 1:
-                        	responseLevelPoint=100; break;
+                        	responseLevelPoint=100; 
+                            gifts<<"\n(21) Response Level: \tFast"<<"\tPoint: "<<responseLevelPoint<<endl;
+                            break;
                         case 2:
-                                responseLevelPoint=80; break;
+                                responseLevelPoint=80; 
+                                gifts<<"\n(21) Response Level: \tModerate"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         case 3:
-                                responseLevelPoint=60; break;
+                                responseLevelPoint=60; 
+                                gifts<<"\n(21) Response Level: \tSteady"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         case 4:
-                                responseLevelPoint=40; break;
+                                responseLevelPoint=40; 
+                                gifts<<"\n(21) Response Level: \tSlow"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         case 5:
-                                responseLevelPoint=20; break;
+                                responseLevelPoint=20; 
+                                gifts<<"\n(21) Response Level: \tIncompatible"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         default:
                                 responseLevelPoint=10;
+                                gifts<<"\n(21) Response Level: \tOthers"<<"\tPoint: "<<responseLevelPoint<<endl;
                 }
 
 	cout<<"\n(22) Current Psychological Status"
@@ -727,15 +1069,24 @@ double personsPerimetre()
 		
 		switch(currentPshychology) {
                         case 1:
-                                currentPshychologyPoint=100 % (int) age; break;
+                                currentPshychologyPoint=100 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tsanguine (enthusiastic, active, and social)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                         case 2:
-                                currentPshychologyPoint=96 % (int) age; break;
+                                currentPshychologyPoint=96 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tcholeric (independent, decisive, goal oriented)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                         case 3:
-                                currentPshychologyPoint=100 % (int) age; break;
+                                currentPshychologyPoint=100 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tmelancholic (analytical, detail oriented, deep thinker and feeler)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                         case 4:
-                                currentPshychologyPoint=90 % (int) age; break;
+                                currentPshychologyPoint=90 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tphlegmatic (relaxed, peaceful, quiet)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                        default:
                        		currentPshychologyPoint=5 % (int) age;
+                            gifts<<"\n(22) Current Psychological Status: \tDefault and Systematic"<<"\tPoint: "<<currentPshychologyPoint<<endl;
                 }
 
 	//Finding the average value of all the persons score
@@ -802,14 +1153,23 @@ double giversPerimetre()
 
 	double giversScore=0.0;
 
+    ofstream gifts;
+    gifts.open ("gifts.txt",ios::app);
+
     cout<<"\nDATA ABOUT YOURSELF"
           "\n###################\n";
 	//Input about giver
+    gifts<<"\nDATA ABOUT YOURSELF"
+          "\n###################\n";
+    
+	//Input for the person who you want to gift
 	cout<<"\n(1) Age: \n";
 	cin>>age;
 		
 		//Age Point out of 100 
 		agePoint=(int)age%100;
+        
+	gifts<<"\n(1) Age: "<<age <<"\tAge Point: "<<agePoint <<endl;
 
 	cout<<"\n(2) Gender [m/f/t]: \n";
 	cin>>gender;
@@ -822,6 +1182,8 @@ double giversPerimetre()
 		else
 			genderPoint=71;
 
+	gifts<<"\n(2) Gender: "<<gender <<"\tGender Point: "<<genderPoint <<endl;
+        
 	cout<<"\n(3) Charater Details: https://quizlet.com/21998611/types-of-character-in-literature-flash-cards/";
 	cout<<"\nCharacter"
 	       "\n\t confidante"
@@ -837,25 +1199,44 @@ double giversPerimetre()
 
 		switch(_(character)) {
   			case _("confidante"):
-    				characterPoint=90; break;
+    				characterPoint=90; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
   			case _("dynamic"):
-    				 characterPoint=80; break;
+    				 characterPoint=80; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                     break;
 			case _("flat"):
-                                 characterPoint=75; break;
+                    characterPoint=75; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("foil"):
-                                 characterPoint=70; break;
+                    characterPoint=70; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("round"):
-                                 characterPoint=65; break;
+                    characterPoint=65; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("static"):
-                                 characterPoint=60; break;
+                    characterPoint=60; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("stock"):
-                                 characterPoint=50; break;
+                    characterPoint=50; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("protagonist"):
-                                 characterPoint=40; break;
+                    characterPoint=40; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
 			case _("antagonist"):
-                                 characterPoint=85; break;
+                    characterPoint=85; 
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
+                    break;
   			default:
-                                 characterPoint=20;
+                    characterPoint=20;
+                    gifts<<"\n(3) Character: "<<character <<"\tCharacter Point: "<<characterPoint<<endl;
   		}
 		//cout<<characterPoint;
 
@@ -881,39 +1262,76 @@ double giversPerimetre()
 
 	switch(_(personality)) {
                         case _("dutiful"):
-                                personalityPoint=1000 %(int)age; break;
+                            personalityPoint=1000 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+                            
                         case _("mechanic"):
-                                 personalityPoint=550 %(int)age; break;
+                            personalityPoint=550 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+
                         case _("nurturer"):
-                                 personalityPoint=800 %(int)age; break;
+                            personalityPoint=800 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+
                         case _("artist"):
-                                 personalityPoint=700 %(int)age; break;
+                            personalityPoint=700 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
+
                         case _("protector"):
-                                 personalityPoint=600 %(int)age; break;
+                            personalityPoint=600 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;                            
+                            break;
                         case _("idealist"):
-                                 personalityPoint=100 %(int)age; break;
+                            personalityPoint=100 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("scientist"):
-                                 personalityPoint=500 %(int)age; break;
+                            personalityPoint=500 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                             break;
                         case _("thinker"):
-                                 personalityPoint=950 %(int)age; break;
+                            personalityPoint=950 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                             break;
                         case _("doer"):
-                                 personalityPoint=650 %(int)age; break;
+                            personalityPoint=650 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                             break;
                         case _("guardian"):
-                                 personalityPoint=400 %(int)age; break;
+                            personalityPoint=400 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("performer"):
-                                 personalityPoint=300 %(int)age; break;
+                            personalityPoint=300 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("caregiver"):
-                                 personalityPoint=750 %(int)age; break;
+                            personalityPoint=750 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("inspirer"):
-                                 personalityPoint=850 %(int)age; break;
+                            personalityPoint=850 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("giver"):
-                                 personalityPoint=900 %(int)age; break;
+                            personalityPoint=900 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("visionary"):
-                                 personalityPoint=350 %(int)age; break;
+                            personalityPoint=350 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         case _("executive"):
-                                 personalityPoint=200 %(int)age; break;
+                            personalityPoint=200 %(int)age; 
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
+                            break;
                         default:
-                                 personalityPoint=50 %(int)age;
+                            personalityPoint=50 %(int)age;
+                            gifts<<"\n(4) Personality: "<<personality <<"\tPersonality Point: "<<personalityPoint<<endl;
                 }
 
 	cout<<"\n(5) Family Background\n"
@@ -925,39 +1343,64 @@ double giversPerimetre()
 		"\t Upper middle class -> Press 6\n"
 		"\t Lower middle class -> Press 7\n"
 		"\t Bourgeoisie -> Press 8\n"
-		"\t WorkingClass -> Press 9\n"
+		"\t Working Class -> Press 9\n"
 		"\t Proletariat -> Press 10\n"
 		"\t Precarity -> Press 11\n"
-		"\t Underclasss -> Press 12\n";
+		"\t Under class -> Press 12\n";
 	cin>>familyBackground;
 
 		switch(familyBackground) {
                         case 1:
-                                familyBackgroundPoint=100; break;
+                                familyBackgroundPoint=100; 
+                                gifts<<"\n(5) Family Background: \tElite"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                break;
                         case 2:
-                                 familyBackgroundPoint=96; break;
+                                 familyBackgroundPoint=96; 
+                                 gifts<<"\n(5) Family Background: \tAristocracy"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 3:
-                                 familyBackgroundPoint=93; break;
+                                 familyBackgroundPoint=93; 
+                                 gifts<<"\n(5) Family Background: \tOligarchy"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 4:
-                                 familyBackgroundPoint=90; break;
+                                 familyBackgroundPoint=90; 
+                                 gifts<<"\n(5) Family Background: \tRuling class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 5:
-                                 familyBackgroundPoint=80; break;
+                                 familyBackgroundPoint=80; 
+                                 gifts<<"\n(5) Family Background: \tMiddle class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 6:
-                                 familyBackgroundPoint=70; break;
+                                 familyBackgroundPoint=70; 
+                                 gifts<<"\n(5) Family Background: \tUpper middle class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 7:
-                                 familyBackgroundPoint=60; break;
+                                 familyBackgroundPoint=60; 
+                                 gifts<<"\n(5) Family Background: \tLower middle class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 8:
-                                 familyBackgroundPoint=50; break;
+                                 familyBackgroundPoint=50; 
+                                 gifts<<"\n(5) Family Background: \tBourgeoisie"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 9:
-                                 familyBackgroundPoint=40; break;
+                                 familyBackgroundPoint=40; 
+                                 gifts<<"\n(5) Family Background: \tWorking class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 10:
-                                 familyBackgroundPoint=30; break;
+                                 familyBackgroundPoint=30; 
+                                 gifts<<"\n(5) Family Background: \tProletariat"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 11:
-                                 familyBackgroundPoint=20; break;
+                                 familyBackgroundPoint=20; 
+                                 gifts<<"\n(5) Family Background: \tPrecarity"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         case 12:
-                                 familyBackgroundPoint=10; break;
+                                 familyBackgroundPoint=10; 
+                                 gifts<<"\n(5) Family Background: \tUnder class"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
+                                 break;
                         default:
                                  familyBackgroundPoint=5;
+                                 gifts<<"\n(5) Family Background: \tDefault"<<"\tFamily Background Point: "<<familyBackgroundPoint<<endl;
 		}
 
 	cout<<"\n(6) Profession\n"
@@ -980,37 +1423,68 @@ double giversPerimetre()
 
 		switch(_(profession)) {
                         case _("businessman"):
-                                 professionPoint=55; break;
+                                 professionPoint=55; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("corporate"):
-                                 professionPoint=35; break;
+                                 professionPoint=35; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("academician"):
-                                 professionPoint=80; break;
+                                 professionPoint=80; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("government"):
-                                 professionPoint=100; break;
+                                 professionPoint=100; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("ngo"):
-                                 professionPoint=50; break;
+                                 professionPoint=50; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("media"):
-                                 professionPoint=70; break;
+                                 professionPoint=70; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("research"):
-                                 professionPoint=40; break;
+                                 professionPoint=40; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("investor"):
-                                 professionPoint=90; break;
+                                 professionPoint=90; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("restaurant"):
-                                 professionPoint=45; break;
-			case _("realestate"):
-                                 professionPoint=30; break;
+                                 professionPoint=45; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
+                        case _("realestate"):
+                                 professionPoint=30; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("mechanic"):
-                                 professionPoint=35; break;
+                                 professionPoint=35; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("health"):
-                                 professionPoint=60; break;
+                                 professionPoint=60; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("finance"):
-                                 professionPoint=95; break;
+                                 professionPoint=95; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("law"):
-                                 professionPoint=85; break;
+                                 professionPoint=85; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         case _("religion"):
-                                 professionPoint=75; break;
+                                 professionPoint=75; 
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
+                                 break;
                         default:
                                  professionPoint=50;
+                                 gifts<<"\n(6) Profession: "<<profession <<"\tProfession Point: "<<professionPoint<<endl;
                 }
 
 
@@ -1027,23 +1501,40 @@ double giversPerimetre()
 		
 		switch(designation) {
                         case 1:
-                                 designationPoint=96; break;
+                                 designationPoint=96; 
+                                 gifts<<"\n(7) Current designation: \tCo-founder"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 2:
-                                 designationPoint=84; break;
+                                 designationPoint=84; 
+                                 gifts<<"\n(7) Current designation: \tTrustees" <<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 3:
-                                 designationPoint=72; break;
+                                 designationPoint=72; 
+                                 gifts<<"\n(7) Current designation: \tPolicy Maker"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 4:
-                                 designationPoint=60; break;
+                                 designationPoint=60; 
+                                 gifts<<"\n(7) Current designation: \tStrategy Maker" <<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 5:
-                                 designationPoint=48; break;
+                                 designationPoint=48; 
+                                 gifts<<"\n(7) Current designation: \tManagement"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 6:
-                                 designationPoint=36; break;
+                                 designationPoint=36; 
+                                 gifts<<"\n(7) Current designation: \tExecutives"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 7:
-                                 designationPoint=24; break;
+                                 designationPoint=24; 
+                                 gifts<<"\n(7) Current designation: \tClarks"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break;
                         case 8:
-                                 designationPoint=12; break; 
+                                 designationPoint=12; 
+                                 gifts<<"\n(7) Current designation: \tOthers"<<"\tDesignation Point: "<<designationPoint<<endl;
+                                 break; 
                         default:
                                  designationPoint=8;
+                                 gifts<<"\n(7) Current designation: \tDefault"<<"\tDesignation Point: "<<designationPoint<<endl;
                 }
 
 	cout<<"\n(8) Level of influence"
@@ -1057,19 +1548,32 @@ double giversPerimetre()
 
 		switch(influence) {
                         case 1:
-                                 influencePoint=90; break;
+                                 influencePoint=90; 
+                                 gifts<<"\n(8) Level of influence: \tConstant influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 2:
-                                 influencePoint=80; break;
+                                 influencePoint=80; 
+                                 gifts<<"\n(8) Level of influence: \tPolitical influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 3:
-                                 influencePoint=71; break;
+                                 influencePoint=71; 
+                                 gifts<<"\n(8) Level of influence: \tEconomic and financial influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 4:
-                                 influencePoint=60; break;
+                                 influencePoint=60; 
+                                 gifts<<"\n(8) Level of influence: \tSocial influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 5:
-                                 influencePoint=50; break;
+                                 influencePoint=50; 
+                                 gifts<<"\n(8) Level of influence: \tTrying to influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         case 6:
-                                 influencePoint=40; break;
+                                 influencePoint=40; 
+                                 gifts<<"\n(8) Level of influence: \tNever try to influence"<<"\tInfluence Point: "<<influencePoint<<endl;
+                                 break;
                         default:
                                  influencePoint=5;
+                                 gifts<<"\n(8) Level of influence: \tDefault"<<"\tInfluence Point: "<<influencePoint<<endl;
                 }
 
         //cin>>schoolInCapital;
@@ -1084,15 +1588,24 @@ double giversPerimetre()
 		
 		switch(highestDegree) {
                         case 1:
-                                 highestDegreePoint=60; break;
+                                 highestDegreePoint=60; 
+                                 gifts<<"\n(9) Highest Degree: \tSchool "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         case 2:
-                                 highestDegreePoint=70; break;
+                                 highestDegreePoint=70; 
+                                 gifts<<"\n(9) Highest Degree: \tCollege "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         case 3:
-                                 highestDegreePoint=80; break;
+                                 highestDegreePoint=80; 
+                                 gifts<<"\n(9) Highest Degree: \tUndergraduate "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         case 4:
-                                 highestDegreePoint=100; break;
+                                 highestDegreePoint=100; 
+                                 gifts<<"\n(9) Highest Degree: \tPostgraduate "<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
+                                 break;
                         default:
                                  highestDegreePoint=10;
+                                 gifts<<"\n(9) Highest Degree: \tDefault"<<"\tHighest Degree Point: "<<highestDegreePoint<<endl;
                 }
 
 	cout<<"\n(10) Location of your highest reachable location for education\n"
@@ -1103,15 +1616,24 @@ double giversPerimetre()
         cin>>locationOfHigestAcademicInstitution;
 		switch(locationOfHigestAcademicInstitution) {
                         case 1:
-                                 locationOfHigestAcademicInstitutionPoint=50; break;
+                                 locationOfHigestAcademicInstitutionPoint=50; 
+                                 gifts<<"\n(10) Location of education:\tHome Town "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         case 2:
-                                 locationOfHigestAcademicInstitutionPoint=80; break;
+                                 locationOfHigestAcademicInstitutionPoint=80; 
+                                 gifts<<"\n(10) Location of education:\tHome Country "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         case 3:
-                                 locationOfHigestAcademicInstitutionPoint=10; break;
+                                 locationOfHigestAcademicInstitutionPoint=10; 
+                                 gifts<<"\n(10) Location of education: \tSelf and at home "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         case 4:
-                                 locationOfHigestAcademicInstitutionPoint=100; break;
+                                 locationOfHigestAcademicInstitutionPoint=100; 
+                                 gifts<<"\n(10) Location of education: \tAbroad "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
+                                 break;
                         default:
                                  locationOfHigestAcademicInstitutionPoint=10;
+                                 gifts<<"\n(10) Location of education: \tDefault "<<"\tLocation of education Point: "<<locationOfHigestAcademicInstitutionPoint<<endl;
                 }
         
 	cout<<"\n(11) Thinking Pattern"
@@ -1124,19 +1646,32 @@ double giversPerimetre()
 	cin>>thinkingPattern;
 		switch(thinkingPattern) {
                         case 1:
-                                 thinkingPatternPoint=700 % (int) age; break;
+                                 thinkingPatternPoint=700 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tConvergent"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 2:
-                                 thinkingPatternPoint=600 % (int) age; break;
+                                 thinkingPatternPoint=600 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tDivergent"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 3:
-                                 thinkingPatternPoint=500 % (int) age; break;
+                                 thinkingPatternPoint=500 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tCritical"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 4:
-                                 thinkingPatternPoint=400 % (int) age; break;
+                                 thinkingPatternPoint=400 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tCreative"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 5:
-                                 thinkingPatternPoint=300 % (int) age; break;
+                                 thinkingPatternPoint=300 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tSequential"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                         case 6:
-                                 thinkingPatternPoint=200 % (int) age; break;
+                                 thinkingPatternPoint=200 % (int) age; 
+                                 gifts<<"\n(11) Thinking Pattern: \tHolistic"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
+                                 break;
                       	default:
                                  thinkingPatternPoint=100 % (int) age;
+                                 gifts<<"\n(11) Thinking Pattern: \tDefault"<<"\tThinking Pattern Point: "<<thinkingPatternPoint<<endl;
                 }
 
 	cout<<"\n(12) Predicted future\n"
@@ -1150,25 +1685,41 @@ double giversPerimetre()
         cin>>highestPossibleFuture;
 		switch(highestPossibleFuture) {
                         case 1:
-                                 highestPossibleFuturePoint=100; break;
+                                 highestPossibleFuturePoint=100; 
+                                 gifts<<"\n(12) Predicted Future: \tGoal oriented"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 2:
-                                 highestPossibleFuturePoint=96; break;
+                                 highestPossibleFuturePoint=96; 
+                                 gifts<<"\n(12) Predicted Future: \tGet high no matter what"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 3:
-                                 highestPossibleFuturePoint=93; break;
+                                 highestPossibleFuturePoint=93; 
+                                 gifts<<"\n(12) Predicted Future: \tOrganized decency"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 4:
-                                 highestPossibleFuturePoint=90; break;
+                                 highestPossibleFuturePoint=90; 
+                                 gifts<<"\n(12) Predicted Future: \tModerate"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 5:
-                                 highestPossibleFuturePoint=80; break;
+                                 highestPossibleFuturePoint=80; 
+                                 gifts<<"\n(12) Predicted Future: \tAnything will do"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 6:
-                                 highestPossibleFuturePoint=70; break;
+                                 highestPossibleFuturePoint=70; 
+                                 gifts<<"\n(12) Predicted Future: \tClassical and conventional"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         case 7:
-                                 highestPossibleFuturePoint=60; break;
+                                 highestPossibleFuturePoint=60; 
+                                 gifts<<"\n(12) Predicted Future: \tFailed to convince"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
+                                 break;
                         default:
                                  highestPossibleFuturePoint=5;
+                                 gifts<<"\n(12) Predicted Future: \tDefault"<<"\tPoint: "<<highestPossibleFuturePoint<<endl;
                 }
 
 	cout<<"\n(13) Number of Language knows\n";
         cin>>numberOfLanguageKnows;
+        gifts<<"\n(13) Number of language knows: \t"<<numberOfLanguageKnows<<endl;
 
 	cout<<"\n(14) Identical quality of awareness\n"
 		"\n\t organism consciousness ->Press 1"
@@ -1182,29 +1733,47 @@ double giversPerimetre()
 	cin>>identicalQuality;
 		switch(identicalQuality) {
                         case 1:
-                                 identicalQualityPoint=100; break;
+                                 identicalQualityPoint=100; 
+                                 gifts<<"\n(14) Identical quality of awareness: \torganism consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 2:
-                                 identicalQualityPoint=96; break;
+                                 identicalQualityPoint=96; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tcontrol consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 3:
-                                 identicalQualityPoint=93; break;
+                                 identicalQualityPoint=93; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tconsciousness of"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 4:
-                                 identicalQualityPoint=90; break;
+                                 identicalQualityPoint=90; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tstate/event consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 5:
-                                 identicalQualityPoint=80; break;
+                                 identicalQualityPoint=80; 
+                                 gifts<<"\n(14) Identical quality of awareness: \treportability"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 6:
-                                 identicalQualityPoint=70; break;
+                                 identicalQualityPoint=70; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tintrospective consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 7:
-                                 identicalQualityPoint=60; break;
+                                 identicalQualityPoint=60; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tsubjective consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         case 8:
-                                 identicalQualityPoint=50; break;
+                                 identicalQualityPoint=50; 
+                                 gifts<<"\n(14) Identical quality of awareness: \tself-consciousness"<<"\tPoint: "<<identicalQualityPoint<<endl;
+                                 break;
                         default:
                                  identicalQualityPoint=5;
+                                 gifts<<"\n(14) Identical quality of awareness: \tDefault"<<"\tPoint: "<<identicalQualityPoint<<endl;
                 }
 
 	cout<<"\n(15) Total Crowd in all events attended till now: \n";
         cin>>totalEstimatedAttendeeInAllEvents;
         totalEstimatedAttendeeInAllEventsPoint= totalEstimatedAttendeeInAllEvents% (int) age;
-
+        gifts<<"\n(15) Total Crowd in all events attended till now: \t"<<totalEstimatedAttendeeInAllEvents<<"\tPoint: "<<totalEstimatedAttendeeInAllEventsPoint<<endl;
+        
 	cout<<"\n(16) Tradition"
 	       "\n\t African ->Press 1"
 	       "\n\t Analytic ->Press 2"
@@ -1226,39 +1795,72 @@ double giversPerimetre()
 
 		switch(tradition) {
                         case 1:
-                                 traditionPoint= 500 % (int) age ; break;
+                                 traditionPoint= 500 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tAfrican"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 2:
-                                 traditionPoint= 1000 % (int) age ; break;
+                                 traditionPoint= 1000 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tAnalytic"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 3:
-                                 traditionPoint= 900 % (int) age ; break;
+                                 traditionPoint= 900 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tAristotelian"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 4:
-                                 traditionPoint= 300 % (int) age ; break;
+                                 traditionPoint= 300 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tBuddhist"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 5:
-                                 traditionPoint= 800 % (int) age ; break;
+                                 traditionPoint= 800 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tChinese"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 6:
-                                 traditionPoint= 700 % (int) age ; break;
+                                 traditionPoint= 700 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tChristian"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 7:
-                                 traditionPoint= 600 % (int) age ; break;
+                                 traditionPoint= 600 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tContinental"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 8:
-                                 traditionPoint= 400 % (int) age ; break;
+                                 traditionPoint= 400 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tExistentialism"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 9:
-                                 traditionPoint= 750 % (int) age ; break;
+                                 traditionPoint= 750 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tHindu"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 10:
-                                 traditionPoint= 200 % (int) age;  break;
+                                 traditionPoint= 200 % (int) age;  
+                                 gifts<<"\n(16) Tradition: \tJain"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 11:
-                                 traditionPoint= 950 % (int) age ; break;
+                                 traditionPoint= 950 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tJewish"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 12:
-                                 traditionPoint= 650 % (int) age; break;
+                                 traditionPoint= 650 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tPragmatism"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 13:
-                                 traditionPoint= 550 % (int) age ; break;
+                                 traditionPoint= 550 % (int) age ; 
+                                 gifts<<"\n(16) Tradition: \tEastern"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 14:
-                                 traditionPoint= 450 % (int) age; break;
+                                 traditionPoint= 450 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tIslamic"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 15:
-                                 traditionPoint= 350 % (int) age; break;
+                                 traditionPoint= 350 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tPlatonic"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         case 16:
-                                 traditionPoint= 911 % (int) age; break;
+                                 traditionPoint= 911 % (int) age; 
+                                 gifts<<"\n(16) Tradition: \tWestern"<<"\tPoint: "<<traditionPoint<<endl;
+                                 break;
                         default:
                                  traditionPoint=100 % (int) age;
+                                 gifts<<"\n(16) Tradition: \tDefault"<<"\tPoint: "<<traditionPoint<<endl;
                 }
 
 	cout<<"\n(17) Philosophy"
@@ -1267,25 +1869,38 @@ double giversPerimetre()
 		"\n\t Logic ->Press 3"
 		"\n\t Ethics ->Press 4"
 		"\n\t Aesthetics ->Press 5"
-		"\n\t Other->Press 6\n";
+		"\n\t Other ->Press 6\n";
         cin>>philosophy;
 		switch(philosophy) {
                         case 1:
-                                 philosophyPoint=500  % (int) age; break;
+                                 philosophyPoint=500  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tEpistemology"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 2:
-                                 philosophyPoint=400  % (int) age; break;
+                                 philosophyPoint=400  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tMetaphysics"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 3:
-                                 philosophyPoint=300  % (int) age; break;
+                                 philosophyPoint=300  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tLogic"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 4:
-                                 philosophyPoint=200  % (int) age; break;
+                                 philosophyPoint=200  % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tEthics"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break;
                         case 5:
-                                 philosophyPoint=100 % (int) age; break; 
+                                 philosophyPoint=100 % (int) age; 
+                                 gifts<<"\n(17) Philosophy: \tAesthetics"<<"\tPoint: "<<philosophyPoint<<endl;
+                                 break; 
                         default:
                                  philosophyPoint=600 % (int) age;
+                                 gifts<<"\n(17) Philosophy: \tOthers"<<"\tPoint: "<<philosophyPoint<<endl;
                 }
 
 	cout<<"\n(18-A) Estimate number of real friends\n";
         cin>>numberofFriend;
+        gifts<<"\n(18-A) Estimate number of real friends: \t"<<numberofFriend<<endl;
+        
         cout<<"\n(18-B) Average Class of friend circle\n"
                 "\t Elite -> Press 1\n"
                 "\t Aristocracy -> Press 2\n"
@@ -1298,42 +1913,70 @@ double giversPerimetre()
                 "\t WorkingClass -> Press 9\n"
                 "\t Proletariat -> Press 10\n"
                 "\t Precarity -> Press 11\n"
-                "\t Underclasss -> Press 12\n";
+                "\t Underclass -> Press 12\n";
         cin>>averageClassofFriendCircle;
 		switch(averageClassofFriendCircle) {
                         case 1:
-                                 averageClassofFriendCirclePoint=100; break;
+                                 averageClassofFriendCirclePoint=100; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tElite"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 2:
-                                 averageClassofFriendCirclePoint=96; break;
+                                 averageClassofFriendCirclePoint=96; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tAristocracy"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 3:
-                                 averageClassofFriendCirclePoint=93; break;
+                                 averageClassofFriendCirclePoint=93; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tOligarchy"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 4:
-                                 averageClassofFriendCirclePoint=90; break;
+                                 averageClassofFriendCirclePoint=90; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tRuling class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 5:
-                                 averageClassofFriendCirclePoint=80; break;
+                                 averageClassofFriendCirclePoint=80; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tMiddle class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 6:
-                                 averageClassofFriendCirclePoint=70; break;
+                                 averageClassofFriendCirclePoint=70; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tUpper middle class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 7:
-                                 averageClassofFriendCirclePoint=60; break;
+                                 averageClassofFriendCirclePoint=60; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tLower middle class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 8:
-                                 averageClassofFriendCirclePoint=50; break;
+                                 averageClassofFriendCirclePoint=50; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tBourgeoisie"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 9:
-                                 averageClassofFriendCirclePoint=40; break;
+                                 averageClassofFriendCirclePoint=40; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tWorking class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 10:
-                                 averageClassofFriendCirclePoint=30; break;
+                                 averageClassofFriendCirclePoint=30; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tProletariat"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 11:
-                                 averageClassofFriendCirclePoint=20; break;
+                                 averageClassofFriendCirclePoint=20; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tPrecarity"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         case 12:
-                                 averageClassofFriendCirclePoint=10; break;
+                                 averageClassofFriendCirclePoint=10; 
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tUnder class"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
+                                 break;
                         default:
                                  averageClassofFriendCirclePoint=5;
+                                 gifts<<"\n(18-B) Average Class of friend circle: \tOthers"<<"\tPoint: "<<averageClassofFriendCirclePoint<<endl;
                 }
 
         weightOfFriendCircle=(numberofFriend*averageClassofFriendCirclePoint)%100;
+        gifts<<"\n(18-C) Weight of friend circle: "<<weightOfFriendCircle<<endl;
 
 	cout<<"\n(19-A) Estimate number of real colleagues\n";
 	cin>>numberofColleagues;
-	cout<<"\n(19-B) Average Class of colleagues circle\n"
+    gifts<<"\n(19-A) Estimate number of real colleagues: \t"<<numberofColleagues<<endl;
+
+    cout<<"\n(19-B) Average Class of colleagues circle\n"
                 "\t Elite -> Press 1\n"
                 "\t Aristocracy -> Press 2\n"
                 "\t Oligarchy -> Press 3\n"
@@ -1349,35 +1992,62 @@ double giversPerimetre()
 	cin>>averageClassofColleagueCircle;
 		switch(averageClassofColleagueCircle) {
                         case 1:
-                                averageClassofColleagueCirclePoint=100; break;
+                                 averageClassofColleagueCirclePoint=100; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tElite"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 2:
-                                 averageClassofColleagueCirclePoint=96; break;
+                                 averageClassofColleagueCirclePoint=96; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tAristocracy"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 3:
-                                 averageClassofColleagueCirclePoint=93; break;
+                                 averageClassofColleagueCirclePoint=93; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tOligarchy"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 4:
-                                 averageClassofColleagueCirclePoint=90; break;
+                                 averageClassofColleagueCirclePoint=90; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tRuling class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 5:
-                                 averageClassofColleagueCirclePoint=80; break;
+                                 averageClassofColleagueCirclePoint=80; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tMiddle class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 6:
-                                 averageClassofColleagueCirclePoint=70; break;
+                                 averageClassofColleagueCirclePoint=70; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tUpper middle class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 7:
-                                 averageClassofColleagueCirclePoint=60; break;
+                                 averageClassofColleagueCirclePoint=60; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tLower middle class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;                                 
+                                 break;
                         case 8:
-                                 averageClassofColleagueCirclePoint=50; break;
+                                 averageClassofColleagueCirclePoint=50; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tBourgeoisie"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 9:
-                                 averageClassofColleagueCirclePoint=40; break;
+                                 averageClassofColleagueCirclePoint=40; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tWorking class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 10:
-                                 averageClassofColleagueCirclePoint=30; break;
+                                 averageClassofColleagueCirclePoint=30; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tProletariat"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 11:
-                                 averageClassofColleagueCirclePoint=20; break;
+                                 averageClassofColleagueCirclePoint=20; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tPrecarity"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         case 12:
-                                 averageClassofColleagueCirclePoint=10; break;
+                                 averageClassofColleagueCirclePoint=10; 
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tUnder class"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+                                 break;
                         default:
                                  averageClassofColleagueCirclePoint=5;
+                                 gifts<<"\n(19-B) Average Class of colleagues circle: \tOthers"<<"\tPoint: "<<averageClassofColleagueCirclePoint<<endl;
+
                 }
 
         weightOfColleaguesCircle=(numberofColleagues*averageClassofColleagueCirclePoint)%100;
-
+        gifts<<"\n(19-C) Weight of colleagues circle: "<<weightOfColleaguesCircle<<endl;
+    
 	cout<<"\n(20) Reaction Level"
                 "\n\t Fast ->Press 1"
                 "\n\t Moderate ->Press 2"
@@ -1387,17 +2057,28 @@ double giversPerimetre()
 	cin>>reactionLevel;
 		switch(reactionLevel) {
                         case 1:
-                                 reactionLevelPoint=100; break;
+                                 reactionLevelPoint=100; 
+                                 gifts<<"\n(20) Reaction Level: \tFast"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 2:
-                                 reactionLevelPoint=96; break;
+                                 reactionLevelPoint=96; 
+                                 gifts<<"\n(20) Reaction Level: \tModerate"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 3:
-                                 reactionLevelPoint=93; break;
+                                 reactionLevelPoint=93; 
+                                 gifts<<"\n(20) Reaction Level: \tSteady"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 4:
-                                 reactionLevelPoint=90; break;
+                                 reactionLevelPoint=90; 
+                                 gifts<<"\n(20) Reaction Level: \tSlow"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         case 5:
-                                 reactionLevelPoint=80; break;
+                                 reactionLevelPoint=80; 
+                                 gifts<<"\n(20) Reaction Level: \tIncompatible"<<"\tPoint: "<<reactionLevelPoint<<endl;
+                                 break;
                         default:
                                  reactionLevelPoint=5;
+                                 gifts<<"\n(20) Reaction Level: \tDefault"<<"\tPoint: "<<reactionLevelPoint<<endl;
                 }
 
 	cout<<"\n(21) Response Level"
@@ -1410,17 +2091,28 @@ double giversPerimetre()
 
 		switch(responseLevel) {
                         case 1:
-                        	responseLevelPoint=100; break;
+                        	responseLevelPoint=100; 
+                            gifts<<"\n(21) Response Level: \tFast"<<"\tPoint: "<<responseLevelPoint<<endl;
+                            break;
                         case 2:
-                                responseLevelPoint=80; break;
+                                responseLevelPoint=80; 
+                                gifts<<"\n(21) Response Level: \tModerate"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         case 3:
-                                responseLevelPoint=60; break;
+                                responseLevelPoint=60; 
+                                gifts<<"\n(21) Response Level: \tSteady"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         case 4:
-                                responseLevelPoint=40; break;
+                                responseLevelPoint=40; 
+                                gifts<<"\n(21) Response Level: \tSlow"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         case 5:
-                                responseLevelPoint=20; break;
+                                responseLevelPoint=20; 
+                                gifts<<"\n(21) Response Level: \tIncompatible"<<"\tPoint: "<<responseLevelPoint<<endl;
+                                break;
                         default:
                                 responseLevelPoint=10;
+                                gifts<<"\n(21) Response Level: \tOthers"<<"\tPoint: "<<responseLevelPoint<<endl;
                 }
 
 	cout<<"\n(22) Current Psychological Status"
@@ -1432,15 +2124,24 @@ double giversPerimetre()
 		
 		switch(currentPshychology) {
                         case 1:
-                                currentPshychologyPoint=100 % (int) age; break;
+                                currentPshychologyPoint=100 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tsanguine (enthusiastic, active, and social)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                         case 2:
-                                currentPshychologyPoint=96 % (int) age; break;
+                                currentPshychologyPoint=96 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tcholeric (independent, decisive, goal oriented)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                         case 3:
-                                currentPshychologyPoint=100 % (int) age; break;
+                                currentPshychologyPoint=100 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tmelancholic (analytical, detail oriented, deep thinker and feeler)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                         case 4:
-                                currentPshychologyPoint=90 % (int) age; break;
+                                currentPshychologyPoint=90 % (int) age; 
+                                gifts<<"\n(22) Current Psychological Status: \tphlegmatic (relaxed, peaceful, quiet)"<<"\tPoint: "<<currentPshychologyPoint<<endl;
+                                break;
                        default:
                        		currentPshychologyPoint=5 % (int) age;
+                            gifts<<"\n(22) Current Psychological Status: \tDefault and Systematic"<<"\tPoint: "<<currentPshychologyPoint<<endl;
                 }
 
 	//Finding the average value of all the persons score
@@ -1563,16 +2264,25 @@ int main()
     double currencyYouWantToSpend;
     string giftGrade;
     
+    ofstream gifts;
+    gifts.open ("gifts.txt",ios::app);
+
     personsScore=personsPerimetre();
     cout<<"\nGIFTEE'S PATTERNED SCORE"
           "\n************************\n";
     cout<<personsScore<<endl;
 
+    gifts<<"\nGIFTEE'S PATTERNED SCORE"
+          "\n************************\n";
+    gifts<<personsScore<<endl;
 
     giversScore=giversPerimetre();
     cout<<"\nYOUR PATTERNED SCORE"
           "\n********************\n";
     cout<<giversScore<<endl;
+    gifts<<"\nYOUR PATTERNED SCORE"
+          "\n********************\n";
+    gifts<<giversScore<<endl;
     
     currencyYouWantToSpend=currency(personsScore,giversScore);
     giftGrade=grade(fmod(personsScore,giversScore));
@@ -1591,6 +2301,22 @@ int main()
     cout<<"\n*******************************************************************************************************************"
           "\n      GIFT MEANS MAKING MEMORIES & FOLLOW UP IMAGE AND REPUTATION - SO WORTH MUCH TO LEARN THE PERSPECTIVES"
           "\n*******************************************************************************************************************\n";
-    
+
+          
+    gifts<<"\n***********************"
+          "\n         SCORES"
+          "\n***********************\n";
+    gifts<<"Giftee's Score: \t"<<personsScore<<endl;
+    gifts<<"Your Score:: \t\t"<<giversScore<<endl;
+
+    gifts<<"\nRECOMMENDATIONS"
+          "\n***************\n";
+    gifts<<"Estimate currency you may expense (MINIMUM): \t $"<<currencyYouWantToSpend<<endl;
+    gifts<<"Minimum quality of the GIFT: \t grade "<<giftGrade<<endl;
+
+    gifts<<"\n*******************************************************************************************************************"
+          "\n      GIFT MEANS MAKING MEMORIES & FOLLOW UP IMAGE AND REPUTATION - SO WORTH MUCH TO LEARN THE PERSPECTIVES"
+          "\n*******************************************************************************************************************\n";
+
 	return 0;
 }
